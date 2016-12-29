@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C219471618761679008A48D5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C219471518761679008A48D5 /* CoreTelephony.framework */; };
 		C2209C5F191E2DBC00C4BA60 /* DemosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2209C5E191E2DBC00C4BA60 /* DemosViewController.m */; };
-		C2505F6B188BDCC900FC969F /* JMODevicePowerInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = C2505F6A188BDCC900FC969F /* JMODevicePowerInfos.m */; };
 		C29315B21866438A005B65AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29315B11866438A005B65AF /* Foundation.framework */; };
 		C29315B41866438A005B65AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29315B31866438A005B65AF /* CoreGraphics.framework */; };
 		C29315B61866438A005B65AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29315B51866438A005B65AF /* UIKit.framework */; };
@@ -48,8 +47,6 @@
 		C219471518761679008A48D5 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		C2209C5D191E2DBC00C4BA60 /* DemosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemosViewController.h; sourceTree = "<group>"; };
 		C2209C5E191E2DBC00C4BA60 /* DemosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemosViewController.m; sourceTree = "<group>"; };
-		C2505F69188BDCC900FC969F /* JMODevicePowerInfos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMODevicePowerInfos.h; sourceTree = "<group>"; };
-		C2505F6A188BDCC900FC969F /* JMODevicePowerInfos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMODevicePowerInfos.m; sourceTree = "<group>"; };
 		C29315AE1866438A005B65AF /* iAppInfos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iAppInfos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29315B11866438A005B65AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C29315B31866438A005B65AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,15 +119,6 @@
 				C29315EA1866445D005B65AF /* NSDictionary+iAppInfos.m */,
 			);
 			name = MobileProvisionning;
-			sourceTree = "<group>";
-		};
-		C2209C5A191E1F3400C4BA60 /* DevicePower */ = {
-			isa = PBXGroup;
-			children = (
-				C2505F69188BDCC900FC969F /* JMODevicePowerInfos.h */,
-				C2505F6A188BDCC900FC969F /* JMODevicePowerInfos.m */,
-			);
-			name = DevicePower;
 			sourceTree = "<group>";
 		};
 		C2209C5B191E1F4500C4BA60 /* SDKinfos */ = {
@@ -241,7 +229,6 @@
 				C29315FD1866448F005B65AF /* iAppInfos.h */,
 				C29315FC1866448F005B65AF /* iAppInfos.m */,
 				C2209C59191E1F1300C4BA60 /* MobileProvisionning */,
-				C2209C5A191E1F3400C4BA60 /* DevicePower */,
 				C2209C5B191E1F4500C4BA60 /* SDKinfos */,
 				C2209C5C191E1F5100C4BA60 /* DeviceName */,
 			);
@@ -298,7 +285,7 @@
 				ORGANIZATIONNAME = "Jerome Morissard";
 				TargetAttributes = {
 					C29315AD1866438A005B65AF = {
-						DevelopmentTeam = G8WDYDSFS7;
+						DevelopmentTeam = 7J77685L3X;
 					};
 					C29315CE1866438A005B65AF = {
 						TestTargetID = C29315AD1866438A005B65AF;
@@ -353,7 +340,6 @@
 				C29315BE1866438A005B65AF /* main.m in Sources */,
 				C29315F11866445D005B65AF /* UIApplication+iAppInfos.m in Sources */,
 				C2209C5F191E2DBC00C4BA60 /* DemosViewController.m in Sources */,
-				C2505F6B188BDCC900FC969F /* JMODevicePowerInfos.m in Sources */,
 				C29315F21866445D005B65AF /* UIDevice+iAppInfos.m in Sources */,
 				C29315F91866446B005B65AF /* JMOViewControllerProvisioningDetails.m in Sources */,
 				C29315C81866438A005B65AF /* JMOViewController.m in Sources */,
@@ -500,6 +486,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7J77685L3X;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iAppInfos/iAppInfos-Prefix.pch";
 				INFOPLIST_FILE = "iAppInfos/iAppInfos-Info.plist";
@@ -517,6 +504,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7J77685L3X;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iAppInfos/iAppInfos-Prefix.pch";
 				INFOPLIST_FILE = "iAppInfos/iAppInfos-Info.plist";
