@@ -175,7 +175,7 @@
 - (NSArray *)filteredKeys
 {
     if (nil == _filteredKeys) {
-            return @[AppVersionManagerKeyTargetedVersion,AppVersionManagerKeyYouriOSVersion,AppVersionManagerKeyYourDeviceModel,AppVersionManagerKeyCompilationSDK,AppVersionManagerKeyCompilationArchitecture, AppVersionManagerKeyCFBundleVersion, AppVersionManagerKeyCFBundleShortVersionString, AppVersionManagerKeyFreeDiskSpace,AppVersionManagerKeyFreeMemory,AppVersionManagerKeyMemoryUseByApp, AppVersionManagerKeyBatteryLevel,AppVersionManagerKeyMobileProvisionning, AppVersionManagerKeyPushToken,AppVersionManagerKeyWSConfiguration];
+            return @[AppUUID,AppVersionManagerKeyTargetedVersion,AppVersionManagerKeyYouriOSVersion,AppVersionManagerKeyYourDeviceModel,AppVersionManagerKeyCompilationSDK,AppVersionManagerKeyCompilationArchitecture, AppVersionManagerKeyCFBundleVersion, AppVersionManagerKeyCFBundleShortVersionString, AppVersionManagerKeyFreeDiskSpace,AppVersionManagerKeyFreeMemory,AppVersionManagerKeyMemoryUseByApp, AppVersionManagerKeyBatteryLevel,AppVersionManagerKeyMobileProvisionning, AppVersionManagerKeyPushToken,AppVersionManagerKeyWSConfiguration];
     }
     return _filteredKeys;
 }
@@ -226,7 +226,10 @@ vm_size_t memoryUsedByApp(void)
 
 - (id)infoForKey:(NSString *)key
 {
-    if ([key isEqualToString:AppVersionManagerKeyTargetedVersion]) {
+    if ([key isEqualToString:AppUUID]) {
+        return [UIDevice currentDevice].identifierForVendor.UUIDString;
+    }
+    else if ([key isEqualToString:AppVersionManagerKeyTargetedVersion]) {
         return [self targetedVersion];
     }
     else if ([key isEqualToString:AppVersionManagerKeyYouriOSVersion]) {

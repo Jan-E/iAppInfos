@@ -11,6 +11,7 @@
 #import "UIDevice+iAppInfos.h"
 #import "JMOMobileProvisionning.h"
 
+#define AppUUID                                         @"appUUID"
 #define AppVersionManagerKeyTargetedVersion             @"targetedVersion"
 #define AppVersionManagerKeyYouriOSVersion              @"currentOSVersion"
 #define AppVersionManagerKeyCFBundleVersion             @"appVersion"
@@ -33,6 +34,7 @@
 
 @interface iAppInfos : NSObject
 
+@property (strong, readonly, nonatomic) NSString *appUUID;
 @property (strong, readonly, nonatomic) NSString *targetedVersion;
 @property (strong, readonly, nonatomic) NSString *currentOSVersion;
 @property (strong, readonly, nonatomic) NSString *appVersion;
